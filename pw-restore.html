@@ -18,7 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/main-pw.css">
 <!--===============================================================================================-->
 </head>
 <body>
@@ -33,88 +33,55 @@
 
 
 			<div class="wrap-login100">
+
+
 				<form class="login100-form validate-form col-12">
 					<span class="login100-form-title">
-						¿Olvidaste tu Clave o Usuario?
+						A continuación deberás ingresar los datos
+						solicitados para cambiar tu contraseña
+						de Oficina Virtual Personal.
 					</span>
-
-					<span class="login100-form-subtitle">
-						Para recuperarlos selecciona una de las siguientes opciones:
-					</span>
-
 
 					<div class="wrap-input100">
 
-						<fieldset>
-								<table class="wrap-table100">
-									<tr>
-										<td>
-											<input type="radio" onchange="swapConfig(this)" name="urlOptions" id="production" checked="checked" />
-											<label for="Usuario">Usuario</label>	
-										</td>
-									</tr>
+				
+							<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+								<input class="input100" type="text" name="email" placeholder="Email">
+								<span class="focus-input100"></span>
+								<span class="symbol-input100">
+									<i class="fa fa-envelope" aria-hidden="true"></i>
+								</span>
+							</div>
 
-									<tr>
-										<td>
-											<input type="radio" onchange="swapConfig(this)" name="urlOptions" id="development" />
-											<label for="CorreoElectronico">Correo Electrónico</label>
-										</td>
-									</tr>
-								</table>
 
-								<div class="text-center">
-									<span class="txt1">
-										Te enviaremos un correo con las instrucciones y datos que solicitaste.
-									</span>
+
+							<div class="wrap-input100 validate-input" data-validate="Password is required">
+
+								
+								<div class="input-group mb-2 mr-sm-2">
+									<div class="input-group-prepend">
+										<div class="input-group-text"><i class="fa fa-eye-slash custom-fa" id="eye"></i></div>
+									</div>
 								</div>
+								 
+								<input class="input100" type="password" name="pass" placeholder="Password" id="password">
+								<span class="focus-input100"></span>
+								<span class="symbol-input100">
+									<i class="fa fa-lock custom-fa1" aria-hidden="true"></i>
+								</span>
+								
+							</div>
 
-								
-								
-								
-							<div id="productionSettings">
-								<br />
-								<p class="wrap-input100">
-									<input type="text" name="p1" placeholder="Nombre de Usuario" class="input100">
-									<span class="focus-input100"></span>
-									<span class="symbol-input100">
-										<i class="fa fa-user" aria-hidden="true"></i>
-									</span>
-								</p>
-							</div>
-							<div id="developmentSettings" style="display:none">
-								<br />
-								<p class="wrap-input100">
-									<input type="text" name="d1" placeholder="Correo Electrónico" class="input100">
-									<span class="focus-input100"></span>
-									<span class="symbol-input100">
-										<i class="fa fa-envelope" aria-hidden="true"></i>
-									</span>
-								</p>
-							</div>
-						</fieldset>
 
 
 					</div>
 					
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							Enviarme un Correo
+							Actualizar Contraseña
 						</button>
 					</div>
 
-					<div class="text-center">
-						<span class="txt1">
-							Si no recuerdas cuál es tu Usuario, haz clic en la opción de Correo Electrónico e ingresa la dirección de correo
-							con el que solicitaste tu acceso a la Oficina Virtual Personal.
-						</span>
-					</div>
-
-					<div class="text-center custom-text-link">
-						<a class="txt2" href="#">
-							No recuerdas ni el usuario o correo electrónico.
-							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-						</a>
-					</div>
 				</form>
 			</div>
 
@@ -152,15 +119,31 @@
 	<script src="js/main.js"></script>
 
 	<script>
-	function swapConfig(x) {
-    var radioName = document.getElementsByName(x.name);
-    for(i = 0 ; i < radioName.length; i++){
-      document.getElementById(radioName[i].id.concat("Settings")).style.display="none";
-    }
-    document.getElementById(x.id.concat("Settings")).style.display="initial";
-  }
 	
+	$(function(){
+
+	$('#eye').click(function(){
+
+	if($(this).hasClass('fa-eye-slash')){
+
+	$(this).removeClass('fa-eye-slash');
+
+	$(this).addClass('fa-eye');
+
+	$('#password').attr('type','text');
+
+	}else{
+
+	$(this).removeClass('fa-eye');
+
+	$(this).addClass('fa-eye-slash');
+
+	$('#password').attr('type','password');
+	}
+	});
+	});
 	</script>
+
 
 </body>
 
