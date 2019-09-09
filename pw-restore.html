@@ -152,32 +152,33 @@
 	<!--Inicio de Script para mostrar/ocultar la contraseña-->
 	<script>
 	
-	$(function(){
+	$(function() {
 
-	$('#eye').click(function(){
+		$('#eye').click(function(){
 
-	if($(this).hasClass('fa-eye-slash')){
+			if($(this).hasClass('fa-eye-slash')){
 
-	$(this).removeClass('fa-eye-slash');
+				$(this).removeClass('fa-eye-slash');
 
-	$(this).addClass('fa-eye');
+				$(this).addClass('fa-eye');
 
-	$('#new-password').attr('type','text');
+				$('#new-password').attr('type','text');
 
-	}else{
+			}else{
 
-	$(this).removeClass('fa-eye');
+				$(this).removeClass('fa-eye');
 
-	$(this).addClass('fa-eye-slash');
+				$(this).addClass('fa-eye-slash');
 
-	$('#new-password').attr('type','password');
-	}
-	});
+				$('#new-password').attr('type','password');
+			}
+		});
 	});
 	</script>
 
 
 	<script>
+
 		$(function () {
 
 			$('#eye2').click(function () {
@@ -200,6 +201,7 @@
 				}
 			});
 		});
+		
 	</script>
 	<!--Fin de Script para mostrar/ocultar la contraseña-->
 
