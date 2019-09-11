@@ -1,0 +1,525 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+  <title>Validaci&oacute;n de solicitud, AFP Atl&aacute;ntida</title>
+
+  <style type="text/css">
+
+    * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    }
+
+    body, html {
+    height: 100%;
+    font-family: 'neo_sans', sans-serif;
+    }
+
+    :root {
+    --rojo-afp: #D7282F;
+    --blanco-afp: #ffffff;
+    --gris-afp: #707070;
+    --grisb-afp:rgb(171, 176, 182);
+    --azul-link: #0080FF;
+    }
+
+    .header {
+      background-color: var(--rojo-afp);
+      color: #FFF;
+      padding: 0.4rem;
+      text-align: center;
+      height: 100px;
+    }
+
+    .header img {
+       width: 20%;
+    }
+
+    .main-title {
+      color: #D9272E;
+      font-size: 24px;
+      text-align: center;
+      padding: 15px;
+    }
+  
+    .custom-title-1 {
+      font-size: 18px;
+      font-weight: bold;
+      color: var(--gris-afp);
+      padding: 20px 100px 10px 300px;
+    }
+
+    .custom-text-1 {
+      font-size: 14px;
+      color: var(--gris-afp);
+      padding: 5px 100px;
+      text-align: center;
+    }
+
+    .custom-text-2 {
+      font-size: 14px;
+      color: var(--gris-afp);
+      padding: 5px 100px;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .user-info {
+      padding: 20px 750px;
+    }
+
+    .user-name,
+    .user-id {
+      display: flex;
+    }
+
+    .user-text {
+      font-size: 18px;
+      color: var(--rojo-afp);
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .form-control {
+      border: none;
+      font-size: 18px;
+      font-weight: bold;
+      color: var(--gris-afp);
+      width: 300px;
+    }
+
+    .button {
+      background-color: var(--rojo-afp);
+      border: none;
+      border-radius: 9px;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: var(--gris-afp);
+    }
+
+    .btn-custom {
+      margin: 0px 800px
+    }
+
+    .cintillo-apps {
+      background-color: var(--gris-afp);
+      color: #FFF;
+      padding: 1.8rem;
+      text-align: center;
+      font-size: 1rem;
+      height: 100px;
+      width: 100%;
+    }
+
+    .cintillo-stuff {
+      display: flex;
+      justify-content: center;
+    }
+
+    .cintillo-img img {
+      margin-left: 20px;
+    }
+
+    .disclaimer {
+      font-size: 18px;
+      color: var(--grisb-afp);
+      font-weight: bold;
+      padding: 20px 70px;
+    }
+
+    #futuro {
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+    }
+
+    /*------------------------------------------------------------------
+    [ Responsive ]*/
+
+    @media (max-width: 1440px) {
+
+      .header {
+      padding: 0rem;
+      height: 100px;
+      }
+
+      .header img {
+      width: 30%;
+      }
+
+      .main-title {
+      font-size: 24px;
+      padding: 15px;
+      }
+
+      .custom-title-1 {
+      font-size: 18px;
+      padding: 20px 100px 10px 129px;
+      }
+
+      .custom-text-1 {
+      font-size: 18px;
+      padding: 5px 100px;
+      }
+
+      .custom-text-2 {
+      font-size: 18px;
+      padding: 5px 100px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      }
+
+      .user-info {
+      padding: 20px 500px;
+      }
+
+      .user-text {
+      font-size: 22px;
+      margin-right: 10px;
+      }
+
+      .form-control {
+      font-size: 22px;
+      width: 500px;
+      }
+
+      .btn-custom {
+      margin: 0px 600px
+      }
+
+      .cintillo-apps {
+      padding: 2rem;
+      font-size: 1rem;
+      }
+
+      .cintillo-img img {
+      margin-left: 30px;
+      }
+
+      .disclaimer {
+      font-size: 18px;
+      padding: 20px 60px;
+      }
+    }
+
+    @media (max-width: 1366px) {
+
+      .custom-title-1 {
+      font-size: 18px;
+      padding: 20px 100px 10px 140px;
+      }
+
+      .user-info {
+      padding: 20px 475px;
+      }
+
+      .form-control {
+      width: 350px;
+      }
+
+      .btn-custom {
+      margin: 0px 565px
+      }
+      
+    }
+
+    @media (max-width: 1280px) {
+
+      .custom-title-1 {
+      padding: 20px 100px 10px 115px;
+      }
+
+      .user-info {
+      padding: 20px 425px;
+      }
+
+      .btn-custom {
+      margin: 0px 520px
+      }
+
+    }
+
+    @media (max-width: 1024px) {
+
+      .header img {
+      width: 40%;
+      }
+
+      .user-info {
+      padding: 20px 300px;
+      }
+
+      .btn-custom {
+      margin: 0px 390px
+      }
+
+      .disclaimer {
+      font-size: 18px;
+      padding: 20px 50px;
+      }
+    }
+
+    @media (max-width: 992px) {
+
+      .header img {
+      width: 50%;
+      }
+
+      .main-title {
+      font-size: 32px;
+      padding: 15px;
+      }
+
+      .custom-title-1 {
+      font-size: 22px;
+      padding: 20px 100px 20px 100px;
+      }
+
+      .custom-text-1 {
+      font-size: 18px;
+      padding: 5px 90px;
+      }
+
+      .user-info {
+      padding: 20px 180px;
+      }
+
+      .form-control {
+      width: 350px;
+      }
+
+      .btn-custom {
+      margin: 0px 295px
+      }
+
+      
+    }
+
+    @media (max-width: 768px) {
+
+      .btn-custom {
+      margin: 0px 265px
+      }
+
+    }
+
+    @media (max-width: 414px) {
+
+       .header img {
+       width: 90%;
+       }
+
+       .main-title {
+       font-size: 28px;
+       padding: 15px;
+       }
+
+       .custom-title-1 {
+       font-size: 20px;
+       padding: 20px 95px 20px 95px;
+       }
+
+       .custom-text-1 {
+       font-size: 16px;
+       padding: 5px 50px;
+       }
+
+      .user-info {
+      padding: 20px 50px;
+      }
+
+     .user-text {
+      font-size: 18px;
+      margin-right: 10px;
+      }
+
+     .form-control {
+      font-size: 18px;
+      width: 275px;
+      }
+
+      .btn-custom {
+      margin: 0px 89px
+      }
+
+      .custom-text-2 {
+      font-size: 16px;
+      padding: 5px 50px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      }
+
+      .cintillo-stuff {
+      display: inline-block;
+      justify-content: center;
+
+      }
+
+      .cintillo-apps {
+      padding: 1.5rem;
+      font-size: 0.8rem;
+      margin-bottom: 20px;
+      height: 115px;
+      }
+
+      .cintillo-img img {
+      margin-left: 10px;
+      margin-top: 15px;
+      width: 44%;
+      }
+
+      .disclaimer {
+      font-size: 14px;
+      padding: 20px 40px;
+      }
+
+
+    }
+
+    @media (max-width: 375px) {
+
+      .header img {
+        width: 95%;
+      }
+
+      .main-title {
+        font-size: 28px;
+        padding: 15px;
+      }
+
+      .custom-title-1 {
+        font-size: 20px;
+        padding: 20px 55px 20px 75px;
+      }
+
+      .custom-text-1 {
+        font-size: 16px;
+        padding: 5px 30px;
+      }
+
+      .custom-text-2 {
+        font-size: 16px;
+        padding: 5px 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .user-info {
+        padding: 20px 30px;
+      }
+
+      .user-text {
+        font-size: 16px;
+        margin-right: 10px;
+      }
+
+      .form-control {
+        font-size: 16px;
+        width: 275px;
+      }
+
+      .btn-custom {
+        margin: 0px 60px
+      }
+
+    }
+
+  </style>
+
+
+</head>
+
+<body>
+
+  <div class="header">
+    <img src="images/logo.png" alt="">
+  </div>
+
+  <div class="main-content">
+
+    <h1 class="main-title">
+      Cambio de Contraseña
+    </h1>
+
+    <div class="main-text">
+
+      <p class="custom-title-1">
+        Estimado(a) Afiliado(a),
+      </p>
+
+      <p class="custom-text-1">A continuación, te compartimos tu Usuario de Oficina Virtual Personal. Para cambiar o recuperar tu contraseña,
+        haz clic en el botón rojo "Recuperar Contraseña" para ingresar tu nueva contraseña. </p>
+
+      <div class="user-info">
+
+        <div class="user-name">
+          <p class="user-text">Nombre:</p>
+          <input type="text" class="form-control" placeholder="Nombre de Usuario">
+        </div>
+
+
+        <div class="user-id">
+          <p class="user-text">Usuario:</p>
+          <input type="text" class="form-control" placeholder="Nombre de Usuario">
+        </div>
+
+      </div>
+
+      <a href="#" class="button btn-custom">Recuperar Contrase&ntilde;a</a>
+
+      <p class="custom-text-2">Si tú no has realizado esta solicitud, favor comunicarse inmediatamente con nosotros al
+        2280-3000 o escríbenos al correo afp@afpatlantida.com. </p>
+
+    </div>
+
+  </div>
+
+  <div class="footer" id="futuro">
+    <img src='images/1920.jpg' srcset='images/1920.jpg 1920w,
+                 images/1440.jpg 1440w' sizes='(min-width: 1440px) 1440px,
+                100vw' />
+  </div>
+
+  <div class="cintillo-apps">
+
+    <div class="cintillo-stuff">
+      <h2>Descarga nuestra renovada APP:</h2>
+
+      <div class="cintillo-img">
+        <a href="http://bit.ly/2SSMHVt" target="_blank" alt="google"><img src="images/Group 85.png" alt=""></a>
+        <a href="https://apple.co/2GNFxeP" target="_blank" alt="apple"><img src="images/Group 98.png" alt=""></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="disclaimer">
+
+    <br />
+    <hr />
+    <br />
+
+    <p class="disclaimer-text">AVISO DE CONFIDENCIALIDAD: Este e-mail contiene informaci&oacute;n que es confidencial y solo puede ser utilizada por las personas o entidades a las cuales est&aacute; dirigida. S&iacute; usted no es el destinatario autorizado, cualquier modificaci&oacute;n, retenci&oacute;n, difusi&oacute;n o copia total o parcial est&aacute; prohibida.</p>
+    <br />
+    <p class="disclaimer-text">CONFIDENTIALITY NOTICE: This email and any files transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. If you are not the named addressee you should not disseminate, distribute or copy this e-mail.</p>
+
+  </div>
+
+
+</body>
+</html>
