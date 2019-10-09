@@ -133,6 +133,7 @@ iframe {
 }
 
 
+
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .txt1 {
@@ -191,7 +192,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 77px 130px 33px 95px;
+  padding: 77px 110px 33px 110px;
 }
 
 /*------------------------------------------------------------------
@@ -206,7 +207,7 @@ iframe {
 }
 
 .header img {
-  width: 23%;
+  width: 12%;
 }
 
 .login100-form {
@@ -391,7 +392,7 @@ input[type="checkbox"]:checked+label {
   }
 
   .header img {
-    width: 35%;
+    width: 15%;
   }
 
   .footer-text p {
@@ -428,7 +429,7 @@ input[type="checkbox"]:checked+label {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 77px 130px 33px 95px;
+    padding: 77px 110px 33px 110px;
   }
 
   .login100-form-title {
@@ -476,7 +477,7 @@ input[type="checkbox"]:checked+label {
   }
 
   .header img {
-    width: 35%;
+    width: 16%;
   }
 
   .footer-text p {
@@ -513,7 +514,7 @@ input[type="checkbox"]:checked+label {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 77px 130px 33px 95px;
+    padding: 77px 110px 33px 110px;
   }
 
   .login100-form-title {
@@ -564,7 +565,7 @@ input[type="checkbox"]:checked+label {
   }
 
   .header img {
-    width: 40%;
+    width: 22%;
   }
 
   .footer-text p {
@@ -601,7 +602,7 @@ input[type="checkbox"]:checked+label {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding: 77px 130px 33px 95px;
+      padding: 77px 110px 33px 110px;
     }
 
     .login100-form-title {
@@ -647,7 +648,7 @@ input[type="checkbox"]:checked+label {
 @media (max-width: 1024px) {
 
   .header img {
-    width: 40%;
+    width: 22%;
   }
 
   .container-login100 {
@@ -678,7 +679,7 @@ input[type="checkbox"]:checked+label {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 47px 130px 33px 95px;
+    padding: 47px 110px 33px 110px;
   }
 
   .login100-form-title {
@@ -729,7 +730,7 @@ input[type="checkbox"]:checked+label {
   }
   
    .header img {
-     width: 65%;
+     width: 115px;
    }
 
    .footer-text p {
@@ -814,7 +815,7 @@ input[type="checkbox"]:checked+label {
     }
 
     .header img {
-      width: 70%;
+      width: 35%;
     }
 
     .footer-text p {
@@ -899,7 +900,7 @@ input[type="checkbox"]:checked+label {
   }
 
   .header img {
-    width: 100%;
+    width: 45%;
   }
 
   .footer-text p {
@@ -992,6 +993,51 @@ input[type="checkbox"]:checked+label {
     margin-bottom: 0px;
   }
 }
+
+@media (max-width: 320px) {
+
+  .header img {
+    width: 60%;
+  }
+
+
+  .login100-form-title {
+    font-size: 20px;
+    padding-bottom: 14px;
+  }
+
+  .login100-form-subtitle {
+    font-size: 14px;
+    padding-bottom: 15px;
+  }
+
+  .wrap-table100 {
+    font-size: 12px;
+    margin: 0px 30px;
+  }
+
+  .login100-form-btn {
+    font-size: 10px;
+  }
+
+  .txt1 {
+    font-size: 10px;
+  }
+
+  .txt2 {
+    font-size: 10px;
+    line-height: 0%;
+  }
+
+  .symbol-input100 {
+    margin-left: -20px;
+  }
+
+  .input100 {
+    padding-left: 35px;
+  }
+}
+
 
 
 /*------------------------------------------------------------------
