@@ -16,7 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
+<!--========================================f=======================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main-pw.css">
 <!--===============================================================================================-->
@@ -46,7 +46,10 @@
 
 							<div class="wrap-input100">
 
+								<!-- inicio Espacio donde aparecera el mensaje de contraseña debil,media o fuerte -->
 								<span id="msg"></span>
+								<!-- fin Espacio donde aparecera el mensaje de contraseña debil,media o fuerte -->
+
 								<div class="input-group mb-2 mr-sm-2">
 									<div class="input-group-prepend">
 										<div class="input-group-text"><i class="fa fa-eye-slash custom-fa" id="eye"></i></div>
@@ -54,7 +57,7 @@
 								</div>
 
 								<input class="input100" type="password" name="pass" placeholder="Introduce tu Contraseña Nueva" id="new-password"
-									onkeyup="validatePassword(this.value);">
+									onkeyup="validatePassword(this.value)" maxlength="13">
 								
 								<span class="focus-input100"></span>
 								<span class="symbol-input100">
@@ -120,9 +123,9 @@
 				</div>
 				<div class="tips-seguridad">
 					<p>• Cada 90 días se te solicitará cambio de contraseña.</p>
-					<p>• Tienes 5 intentos erróneos antes que tu usuario se bloquée</p>
+					<p>• La contraseña debe contener al menos un carácter en mayúscula y otro en minúscula.</p>
 					<p>• La contraseña debe contener entre 8 - 13 caracteres.</p>
-					<p>• La contraseña debe contener números y un caracter especial. (#,$,/,!,@,etc...)</p>
+					<p>• La contraseña debe contener números y al menos un carácter especial. (#,$,/,!,@,etc...)</p>
 					<p>• No debe contener el nombre del usuario.</p>
 					<p>• La contraseña no debe haber sido utilizada anteriormente.</p>
 					
@@ -239,6 +242,10 @@
 
 	<!--Inicio de Script para validar seguridad de Password-->
 	<script>
+
+		// Aqui no se si abra alguna variable que almacene el username del usuario aunque el no lo pueda ver, de no haberlo, entonces eliminar esta constante y tambien el if (password,includes(username)
+		const username = "Fernando Soto";
+
 		function validatePassword(password) {
 
 			// Do not show anything when the length of password is zero.
@@ -246,13 +253,21 @@
 				document.getElementById("msg").innerHTML = "";
 				return;
 			}
+
+			// Password is invalide if it's the same as username
+			 if (password.includes(username)) {
+			 document.getElementById("msg").innerHTML = "La contraseña no debe contener el nombre de usuario.";
+			 return;
+			 }
+
 			// Create an array and push all possible values that you want in password
 			var matchedCase = new Array();
 			matchedCase.push("[$@$!%*#?&]"); // Special Charector
 			matchedCase.push("[A-Z]"); // Uppercase Alpabates
 			matchedCase.push("[0-9]"); // Numbers
 			matchedCase.push("[a-z]"); // Lowercase Alphabates
-
+			
+	
 			// Check the conditions
 			var ctr = 0;
 			for (var i = 0; i < matchedCase.length; i++) {

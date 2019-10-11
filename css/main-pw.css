@@ -162,7 +162,7 @@ iframe {
 .wrap-login100 {
   width: 960px;
   background: var(--blanco-afp);
-  height: 650px;
+  height: 700px;
   border-radius: 10px;
   overflow: hidden;
   display: -webkit-box;
@@ -280,7 +280,7 @@ iframe {
  }
 
  .tips-seguridad {
-   margin: 0px 110px; 
+   margin: -15px 110px 0px 110px;  
  }
 
 /*------------------------------------------------------------------
